@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C90A8B3-256E-4B08-A7F8-305D7AFBC415}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyFram.Core</RootNamespace>
+    <AssemblyName>MyFram.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Boleto.Net">
+      <HintPath>..\packages\Boleto.Net.2.0.24\lib\net20\Boleto.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=2.1.2.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.5.4.0.0\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Hammock.ClientProfile">
+      <HintPath>..\packages\TweetSharp.2.3.1\lib\4.0\Hammock.ClientProfile.dll</HintPath>
+    </Reference>
+    <Reference Include="InstaSharp">
+      <HintPath>..\packages\InstaSharp.1.1.0.0\lib\net40\InstaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\packages\DotNetZip.1.9.3\lib\net20\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Pechkin">
+      <HintPath>..\packages\Pechkin.0.5.8.1\lib\net40\Pechkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Pechkin.Synchronized">
+      <HintPath>..\packages\Pechkin.Synchronized.0.5.8.1\lib\net40\Pechkin.Synchronized.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz.2.2.4\lib\net40\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.Core">
+      <HintPath>..\packages\Swashbuckle.Core.4.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.SelfHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.SelfHost.4.0.30506.0\lib\net40\System.Web.Http.SelfHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TweetSharp">
+      <HintPath>..\packages\TweetSharp.2.3.1\lib\4.0\TweetSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\Controller\BaseBusinessController.cs" />
+    <Compile Include="Api\Controller\BaseBusinessViewModel.cs" />
+    <Compile Include="Api\Controller\BaseController.cs" />
+    <Compile Include="Api\Controller\BaseViewModel.cs" />
+    <Compile Include="Api\Domain\QueryApi.cs" />
+    <Compile Include="Api\Domain\ReturnApi.cs" />
+    <Compile Include="Attribute\BaseAttribute.cs" />
+    <Compile Include="Attribute\Business\BaseBusinessAttribute.cs" />
+    <Compile Include="Attribute\Business\UniquePerAgentAttribute.cs" />
+    <Compile Include="Attribute\Business\UniquePerCompanyAttribute.cs" />
+    <Compile Include="Attribute\Business\UniquePerCompanyGroupAttribute.cs" />
+    <Compile Include="Attribute\Business\UniquePerUserAttribute.cs" />
+    <Compile Include="Attribute\Document\BaseDocumentAttribute.cs" />
+    <Compile Include="Attribute\Document\CepAttribute.cs" />
+    <Compile Include="Attribute\Document\CpfCnpjAttribute.cs" />
+    <Compile Include="Attribute\Document\EmailAttribute.cs" />
+    <Compile Include="Attribute\Document\Enum\CpfCnpjEnum.cs" />
+    <Compile Include="Attribute\Document\InscricaoEstadualAttribute.cs" />
+    <Compile Include="Attribute\Document\PisAttribute.cs" />
+    <Compile Include="Attribute\Document\PlacaAttribute.cs" />
+    <Compile Include="Attribute\Document\TelefoneAttribute.cs" />
+    <Compile Include="Attribute\Schema\BaseSchemaAttribute.cs" />
+    <Compile Include="Attribute\Schema\LenghtAttribute.cs" />
+    <Compile Include="Attribute\Schema\MaxLenghtAttribute.cs" />
+    <Compile Include="Attribute\Schema\NotEmptyAttribute.cs" />
+    <Compile Include="Attribute\Schema\NotEqualAttribute.cs" />
+    <Compile Include="Attribute\Schema\NotNullAttribute.cs" />
+    <Compile Include="Attribute\Schema\RangeAttribute.cs" />
+    <Compile Include="Attribute\Schema\RequiredAttribute.cs" />
+    <Compile Include="Boleto\BoletoHelper.cs" />
+    <Compile Include="Converter\BaseConverter.cs" />
+    <Compile Include="Data\DataHelper.cs" />
+    <Compile Include="Data\Contract\IRepository.cs" />
+    <Compile Include="Data\Contract\IUnitOfWork.cs" />
+    <Compile Include="Data\RepositoryHelper.cs" />
+    <Compile Include="Document\BaseDocument.cs" />
+    <Compile Include="Document\CepDocument.cs" />
+    <Compile Include="Document\CnpjDocument.cs" />
+    <Compile Include="Document\CpfDocument.cs" />
+    <Compile Include="Document\EmailDocument.cs" />
+    <Compile Include="Document\InscricaoEstadualDocument.cs" />
+    <Compile Include="Document\PisDocument.cs" />
+    <Compile Include="Document\PlacaDocument.cs" />
+    <Compile Include="Document\TelefoneDocument.cs" />
+    <Compile Include="Domain\BaseEntity.cs" />
+    <Compile Include="Domain\BaseEntityRules.cs" />
+    <Compile Include="Domain\Business\BaseBusinessEntity.cs" />
+    <Compile Include="Domain\Business\BaseBusinessEntityRules.cs" />
+    <Compile Include="Domain\Enum\BaseEnum.cs" />
+    <Compile Include="Exception\BaseException.cs" />
+    <Compile Include="Exception\ExceptionHelper.cs" />
+    <Compile Include="Extension\DateTimeExtension.cs" />
+    <Compile Include="Extension\FileExtension.cs" />
+    <Compile Include="Extension\StringExtension.cs" />
+    <Compile Include="Ioc\BaseBinding.cs" />
+    <Compile Include="Linq\DynamicQuery\Dynamic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\EmbeddedAssembly.cs" />
+    <Compile Include="Reflection\ReflectionHelper.cs" />
+    <Compile Include="Scheduler\SchedulerHelper.cs" />
+    <Compile Include="Social\Controller\BaseSocialController.cs" />
+    <Compile Include="Social\Controller\BaseSocialViewModel.cs" />
+    <Compile Include="Social\Domain\AccessTokenEntity.cs" />
+    <Compile Include="Social\Domain\AccessTokenEntityRules.cs" />
+    <Compile Include="Social\Domain\BaseSocialEntity.cs" />
+    <Compile Include="Social\Domain\BaseSocialEntityRules.cs" />
+    <Compile Include="Social\Domain\FeedEntity.cs" />
+    <Compile Include="Social\Domain\FeedEntityRules.cs" />
+    <Compile Include="Social\Domain\RequestTokenEntity.cs" />
+    <Compile Include="Social\Domain\RequestTokenEntityRules.cs" />
+    <Compile Include="Social\Contract\ISocialHelper.cs" />
+    <Compile Include="Social\Instagram\Controller\InstagramController.cs" />
+    <Compile Include="Social\Instagram\Controller\InstagramViewModel.cs" />
+    <Compile Include="Social\Instagram\InstagramHelper.cs" />
+    <Compile Include="Social\Twitter\Controller\TwitterController.cs" />
+    <Compile Include="Social\Twitter\Controller\TwitterViewModel.cs" />
+    <Compile Include="Social\Twitter\TwitterHelper.cs" />
+    <Compile Include="Util\Config.cs" />
+    <Compile Include="Util\Constant.cs" />
+    <Compile Include="Util\Mask.cs" />
+    <Compile Include="Util\Message.cs" />
+    <Compile Include="Validator\BaseValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libeay32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libgcc_s_dw2-1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Linq\DynamicQuery\Dynamic Expressions.html" />
+    <Content Include="mingwm10.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resource\DllInscE32.dll" />
+    <Content Include="ssleay32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wkhtmltox0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
